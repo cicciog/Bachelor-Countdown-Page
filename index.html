@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Francesco Gualtieri</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://cdn4.iconfinder.com/data/icons/Basic_set2_Png/64/user5.png" />
+        <link href="css/style.min.css" rel="stylesheet" />
+        <link href="css/mb-comingsoon-iceberg.css" rel="stylesheet" />
+    </head>
+    <body>
+        <section class="dark-blue color-2 ">
+            <div class="inner-page">
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-4">
+                        <img class="img-responsive centered" src="http://www.studenthub.ug/images/graduation-hat.png" /></div>
+                </div>
+                <div class="text-center hgroup">
+                    <h1 class="page-headline large">Francesco Gualtieri</h1>
+                    <h3>Waiting for my graduation in Computer Science...</h3>
+                </div>
+            </div>
+            <div class="row centered text-center" id="myCounter"></div>
+
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='js/Lib/jquery-1.11.0.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
+        <script src="js/jquery.mb-comingsoon.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                var $section = $('section');
+                $(window).on("resize", function () {
+                    var dif = Math.max($(window).height() - $section.height(), 0);
+                    var padding = Math.floor(dif / 2) + 'px';
+                    $section.css({'padding-top': padding, 'padding-bottom': padding});
+                }).trigger("resize");
+                $('#myCounter').mbComingsoon({expiryDate: new Date('2017-04-27,09:00:00'), speed: 100});
+                setTimeout(function () {
+                    $(window).resize();
+                }, 200);
+            });
+
+        </script>
+
+    </body>
+</html>
